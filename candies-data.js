@@ -2,7 +2,7 @@ export const candies = [
     {
         name: 'Snickers',
         flavor: 'Chocolatey peanuts and nougat',
-        type: 'candybar',
+        type: 'candy bar',
     },
     {
         name: 'Reeses',
@@ -11,7 +11,7 @@ export const candies = [
     },
     {
         name: 'Nerds',
-        flavor: 'Purple and Pinkberry',
+        flavor: 'Purple and Pink berry',
         type: 'Sour hard candy',
     },
 ];
