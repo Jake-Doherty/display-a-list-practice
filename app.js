@@ -8,9 +8,15 @@ import { renderCandy } from './render-candy.js';
 import { cats } from './cats-data.js';
 import { renderCat } from './render-cat.js';
 
+// List Three
+import { musicGenres } from './music-data.js';
+import { renderMusic } from './render-music.js';
+
 const candyList = document.getElementById('candy-list');
 
 const catList = document.getElementById('cat-list');
+
+const musicList = document.getElementById('music-list');
 
 function displayCandies() {
     candyList.innerHTML = '';
@@ -30,5 +36,15 @@ function displayCats() {
     }
 }
 
+function displayGenres() {
+    catList.innerHTML = '';
+
+    for (let genre of musicGenres) {
+        const genreElem = renderMusic(genre);
+        musicList.append(genreElem);
+    }
+}
+
 displayCandies();
 displayCats();
+displayGenres();
