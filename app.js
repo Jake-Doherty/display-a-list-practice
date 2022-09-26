@@ -12,11 +12,16 @@ import { renderCat } from './render-cat.js';
 import { musicGenres } from './music-data.js';
 import { renderMusic } from './render-music.js';
 
+import { shows } from './show-data.js';
+import { renderShow } from './render-shows.js';
+
 const candyList = document.getElementById('candy-list');
 
 const catList = document.getElementById('cat-list');
 
 const musicList = document.getElementById('music-list');
+
+const showList = document.getElementById('show-list');
 
 function displayCandies() {
     candyList.innerHTML = '';
@@ -37,7 +42,7 @@ function displayCats() {
 }
 
 function displayGenres() {
-    catList.innerHTML = '';
+    musicList.innerHTML = '';
 
     for (let genre of musicGenres) {
         const genreElem = renderMusic(genre);
@@ -45,6 +50,16 @@ function displayGenres() {
     }
 }
 
+function displayShows() {
+    showList.innerHTML = '';
+
+    for (let show of shows) {
+        const showElem = renderShow(show);
+        showList.append(showElem);
+    }
+}
+
 displayCandies();
 displayCats();
 displayGenres();
+displayShows();
